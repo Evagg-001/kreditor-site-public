@@ -115,3 +115,27 @@
   }
 }
 
+
+/* Accessibility contrast fixes */
+.conversion-path .eyebrow{
+  color:#6f531c;
+}
+.conversion-path-grid article>span{
+  color:#76581f;
+}
+.audience-card.feature>span{
+  color:#d1ae65;
+}
+.eyebrow.dark{
+  color:#806126;
+}
+.section-soft .section-heading>p:not(.eyebrow),
+.section-soft .principle-cards p,
+.director-responsibility .director-note{
+  color:#5f6878;
+}
+
+/* Accessibility: director note contrast */
+body .director-responsibility .director-note{
+  color:#5f6878!important;
+}
