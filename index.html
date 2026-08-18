@@ -12,33 +12,6 @@
 
 <link href="/app-static/app.b54a6c2d03e3.min.css" rel="stylesheet"/>
 <link rel="canonical" href="https://kreditor.pro/">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="ru_RU">
-<meta property="og:site_name" content="КРЕДИТОР">
-<meta property="og:title" content="КРЕДИТОР — федеральная юридическая платформа">
-<meta property="og:description" content="Взыскание долгов, урегулирование задолженности, корпоративные и лизинговые юридические решения по всей России.">
-<meta property="og:url" content="https://kreditor.pro/">
-<meta property="og:image" content="https://kreditor.pro/assets/hero.webp">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="КРЕДИТОР — федеральная юридическая платформа">
-<meta name="twitter:description" content="Взыскание долгов, урегулирование задолженности, корпоративные и лизинговые юридические решения по всей России.">
-<meta name="twitter:image" content="https://kreditor.pro/assets/hero.webp">
-
-<script type="application/ld+json" data-schema="organization">
-{
-  "@context": "https://schema.org",
-  "@type": "LegalService",
-  "name": "ООО «КРЕДИТОР»",
-  "url": "https://kreditor.pro/",
-  "telephone": "+7-977-737-97-37",
-  "email": "kreditoro@bk.ru",
-  "areaServed": {
-    "@type": "Country",
-    "name": "Россия"
-  }
-}
-</script>
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 
 <style id="kreditor-cabinet-style">
@@ -96,7 +69,7 @@
 </head>
 <body data-build="KREDITOR-V17.0-PRODUCTION">
 <a class="skip-link" href="#main">Перейти к содержанию</a>
-<header class="site-header" id="top"><div class="container nav-wrap"><a class="brand" href="#top">
+<header class="site-header" id="top"><div class="container nav-wrap"><a aria-label="Кредитор — на главную" class="brand" href="#top">
 <span class="brand-mark">К</span>
 <span><strong>КРЕДИТОР</strong><small data-i18n="brandTag">решения · переговоры · исполнение</small></span>
 </a>
@@ -108,11 +81,10 @@
 <a data-i18n="navRussia" href="#federal">По всей России</a>
 <a data-i18n="navPromise" href="#promise">Наш кодекс</a>
 <a data-i18n="navContacts" href="#contact">Контакты</a>
-<a class="mobile-cabinet-link" href="https://cabinet.kreditor.pro/app">Личный кабинет</a>
 </nav>
 
 <a class="header-phone" href="tel:+79777379737">+7 (977) 737-97-37</a>
-<a class="btn btn-ghost header-cabinet" href="https://cabinet.kreditor.pro/app" aria-label="Открыть личный кабинет клиента">Личный кабинет</a>
+<a class="btn btn-ghost header-cabinet" href="/cabinet" aria-label="Открыть личный кабинет клиента">Личный кабинет</a>
 <button class="btn btn-primary header-cta" data-i18n="ctaAnalyze" data-open-modal="">Разобрать ситуацию</button>
 </div>
 </header>
@@ -375,19 +347,62 @@
 <script defer src="assets/js/modules/navigation.js"></script>
 <script defer src="assets/js/modules/lead-modal.js"></script>
 <script defer src="assets/js/modules/lead-flow.js"></script>
-<script defer src="assets/js/modules/cookie-banner.js"></script>
-<script defer src="assets/js/modules/contact-tracking.js"></script>
-<script defer src="assets/js/modules/reveal.js"></script>
+<script>
+window.addEventListener("load", function () {
+    [
+                        "assets/js/modules/cookie-banner.js",
+        "assets/js/modules/contact-tracking.js",
+        "assets/js/modules/reveal.js"
+    ].forEach(function (src) {
+        const script = document.createElement("script");
+        script.src = src;
+        script.async = true;
+        document.body.appendChild(script);
+    });
+});
+</script>
 <script defer src="assets/js/services/security.js"></script>
 <script defer src="assets/js/core/bootstrap.js"></script><div aria-label="Настройки файлов cookie" class="cookie-banner" id="cookie-banner" role="dialog"><p>Сайт использует обязательные файлы cookie и, с вашего согласия, Яндекс.Метрику. Подробнее — в <a href="legal/cookies.html"><u>политике Cookie</u></a>.</p><div class="cookie-actions"><button class="btn btn-primary" id="cookie-accept" type="button">Разрешить аналитику</button><button class="btn btn-ghost" id="cookie-reject" type="button">Только обязательные</button></div></div><nav aria-label="Быстрые способы связи" class="mobile-contact-bar">
 <a data-contact-channel="phone" href="tel:+79777379737"><span>☎</span><small>Позвонить</small></a>
 <a data-contact-channel="whatsapp" href="https://wa.me/79777379737" rel="noopener noreferrer" target="_blank"><span>W</span><small>WhatsApp</small></a>
 <a data-contact-channel="telegram" href="https://t.me/ooo_kreditor" rel="noopener noreferrer" target="_blank"><span>T</span><small>Telegram</small></a>
 </nav>
+<script>
+window.addEventListener("load", () => {
+  [
+            "assets/js/modules/cookie-banner.js",
+    "assets/js/modules/contact-tracking.js",
+        "assets/js/modules/reveal.js",
+    "role-select.js"
+  ].forEach(src => {
+    const s = document.createElement("script");
+    s.src = src;
+    s.defer = true;
+    document.body.appendChild(s);
+  });
+});
+</script>
 
 
+<script>
+window.KreditorIdleLoader = () => {
+  [
+            "assets/js/modules/cookie-banner.js",
+    "assets/js/modules/contact-tracking.js",
+    "assets/js/modules/reveal.js",
+    "role-select.js"
+  ].forEach(src => {
+    const s = document.createElement("script");
+    s.src = src;
+    document.body.appendChild(s);
+  });
+};
 
-
+(window.requestIdleCallback || window.setTimeout)(
+  window.KreditorIdleLoader,
+  2000
+);
+</script>
 
 
 
