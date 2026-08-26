@@ -43,6 +43,41 @@ window.KREDITOR_ANALYTICS = {
     });
   }
 
-  window.KreditorAnalytics = { init: init, hasConsent: hasConsent };
+  function track(goal, params) {
+    if (
+      typeof goal !== "string" ||
+      !goal ||
+      !hasConsent()
+    ) {
+      return false;
+    }
+
+    init();
+
+    if (typeof window.ym !== "function") {
+      return false;
+    }
+
+    try {
+      window.ym(
+        counterId,
+        "reachGoal",
+        goal,
+        params || {}
+      );
+      return true;
+    } catch (error) {
+      return false;
+    }
+  }
+
+  window.KreditorAnalytics = {
+    init: init,
+    hasConsent: hasConsent,
+    track: track
+  };
+
+  window.track = track;
+
   init();
 })(window, document);
