@@ -1,6 +1,6 @@
 /* analytics-config.js */
 window.KREDITOR_ANALYTICS = {
-  yandexMetrikaId: 110621481,
+  yandexMetrikaId: 111984123,
   consentKey: "kreditor_analytics_consent"
 };
 

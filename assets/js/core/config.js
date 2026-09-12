@@ -14,7 +14,7 @@
 
     analytics: Object.freeze({
       provider: "yandex",
-      counterId: 110621481,
+      counterId: 111984123,
       consentKey: "kreditor_analytics_consent",
       webvisor: false
     }),
