@@ -877,3 +877,6 @@ body[data-build="KREDITOR-V24-POLISH"] .cookie-actions .btn{
 #how-we-work .eyebrow.dark{color:#765923}
 #how-we-work .k15-section-lead{color:#5f6877}
 #how-we-work .k15-actions i{color:#765923;opacity:1}
+
+/* KREDITOR a11y: soft-section eyebrow contrast */
+.section-soft .eyebrow.dark{color:#765923}
