@@ -1,7 +1,8 @@
 /* analytics-config.js */
 window.KREDITOR_ANALYTICS = {
-  yandexMetrikaId: 111984123,
-  consentKey: "kreditor_analytics_consent"
+  yandexMetrikaId: 110621481,
+  consentKey: "kreditor_analytics_consent",
+  webvisor: true
 };
 
 /* consent-aware yandex-metrika.js */
@@ -39,45 +40,10 @@ window.KREDITOR_ANALYTICS = {
       clickmap: true,
       trackLinks: true,
       accurateTrackBounce: true,
-      webvisor: window.location.hostname !== 'localhost'
+      webvisor: Boolean(config.webvisor) && window.location.hostname !== 'localhost'
     });
   }
 
-  function track(goal, params) {
-    if (
-      typeof goal !== "string" ||
-      !goal ||
-      !hasConsent()
-    ) {
-      return false;
-    }
-
-    init();
-
-    if (typeof window.ym !== "function") {
-      return false;
-    }
-
-    try {
-      window.ym(
-        counterId,
-        "reachGoal",
-        goal,
-        params || {}
-      );
-      return true;
-    } catch (error) {
-      return false;
-    }
-  }
-
-  window.KreditorAnalytics = {
-    init: init,
-    hasConsent: hasConsent,
-    track: track
-  };
-
-  window.track = track;
-
+  window.KreditorAnalytics = { init: init, hasConsent: hasConsent };
   init();
 })(window, document);
